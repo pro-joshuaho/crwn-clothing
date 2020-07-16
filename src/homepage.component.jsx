@@ -13,7 +13,7 @@ const Homepage = () => {
         </div>
         <div className="menu-item">
           <div className="content">
-            <h1 className="title">HOODIES</h1>
+            <h1 className="title">CLOTHING</h1>
             <span className="subtitle">SHOP NOW</span>
           </div>
         </div>
