@@ -2,3 +2,6 @@ body {
   font-family: "Open Sans Condensed";
   padding: 25px 60px;
 }
+* {
+  box-sizing: border-box;
+}

@@ -1,0 +1,11 @@
+.sign-in {
+  width: 30vw;
+  margin: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  & .button {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}

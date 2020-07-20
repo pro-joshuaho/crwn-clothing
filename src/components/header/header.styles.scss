@@ -3,12 +3,12 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 25px;
 
   .logo-container {
-    height: 100%;
-    width: 70px;
-    padding: 25px;
+    height: 39px;
+    width: 50px;
   }
 
   .options {
@@ -17,8 +17,9 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    cursor: pointer;
 
-    .option {
+    a {
       padding: 10px 15px;
       text-decoration: none;
       color: black;
