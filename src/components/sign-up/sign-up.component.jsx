@@ -19,23 +19,24 @@ class SignUp extends React.Component {
     const { displayName, email, password, confirmPassword } = this.state;
     if (password !== confirmPassword) {
       alert("password don't match");
-      return;
-    } else {
-      try {
-        const { user } = await auth.createUserWithEmailAndPassword(
-          email,
-          password
-        );
-        createUserProfile(user, { displayName });
-      } catch (error) {
-        console.log(error);
-      }
+      return; // don't do the rest things
+    }
+    try {
+      const { user } = await auth.createUserWithEmailAndPassword(
+        email,
+        password
+      );
+
+      await createUserProfile(user, { displayName });
+
       this.setState({
         email: "",
         displayName: "",
         password: "",
         confirmPassword: "",
       });
+    } catch (error) {
+      console.log(error);
     }
   };
 
@@ -49,14 +50,14 @@ class SignUp extends React.Component {
       <div className="sign-up">
         <h2>I don't have an account</h2>
         <p>Sign up with your email and password</p>
-        <form className="sign-up-form">
+        <form className="sign-up-form" onSubmit={this.handleSubmit}>
           <FormInput
             value={this.state.displayName}
             type="text"
             name="displayName"
             label="Display Name"
             handleChange={this.handleChange}
-            required={true}
+            required
           />
           <FormInput
             value={this.state.email}
@@ -64,7 +65,7 @@ class SignUp extends React.Component {
             name="email"
             label="Email"
             handleChange={this.handleChange}
-            required={true}
+            required
           />
           <FormInput
             value={this.state.password}
@@ -72,7 +73,7 @@ class SignUp extends React.Component {
             name="password"
             label="Password"
             handleChange={this.handleChange}
-            required={true}
+            required
           />
           <FormInput
             value={this.state.confirmPassword}
@@ -80,11 +81,9 @@ class SignUp extends React.Component {
             name="confirmPassword"
             label="Confirm pasword"
             handleChange={this.handleChange}
-            required={true}
+            required
           />
-          <CustomButton type="submit" onClick={this.handleSubmit}>
-            Sign Up
-          </CustomButton>
+          <CustomButton type="submit">Sign Up</CustomButton>
         </form>
       </div>
     );

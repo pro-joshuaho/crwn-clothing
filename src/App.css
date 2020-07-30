@@ -5,3 +5,8 @@ body {
 * {
   box-sizing: border-box;
 }
+@media screen and (max-width: 400px) {
+  body {
+    padding: 25px 15px;
+  }
+}

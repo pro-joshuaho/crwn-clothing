@@ -1,11 +1,17 @@
 .sign-in {
   width: 30vw;
-  margin: 10px 30px;
+  min-width: 300px;
+  margin: 30px 30px;
   display: flex;
   flex-direction: column;
   & .button {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: start;
+  }
+}
+@media screen and (max-width: 839px) {
+  .sign-in {
+    width: 100%;
   }
 }

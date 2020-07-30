@@ -1,7 +1,13 @@
 .sign-up {
   width: 30vw;
-  margin: 10px 30px;
+  min-width: 300px;
+  margin: 30px 30px;
   h2 {
     margin: 10px 0;
+  }
+}
+@media screen and (max-width: 839px) {
+  .sign-up {
+    width: 100%;
   }
 }

@@ -20,10 +20,10 @@ export const createUserProfile = async (userAuth, additionalData) => {
 
   const snapShot = await userRef.get();
 
-  if (!snapShot.exist) {
+  if (!snapShot.exists) {
+    // exists (not exist) have "s"
     const { displayName, email } = userAuth;
     const createdAt = new Date();
-
     try {
       await userRef.set({
         displayName,
