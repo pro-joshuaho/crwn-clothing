@@ -1,6 +1,13 @@
+$normal-height: 240px;
+@media screen and (max-width: 400px) {
+  .menu-item {
+    min-width: 70% !important;
+  }
+}
+
 .menu-item {
   min-width: 30%;
-  height: 240px;
+  height: $normal-height;
   flex: 1 1 auto;
   display: flex;
   align-items: center;
@@ -9,17 +16,12 @@
   margin: 0 7.5px 15px;
   overflow: hidden;
 
-  &.large {
-    height: 380px !important;
+  @media screen and (min-width: 570px) {
+    &.large {
+      height: 380px !important;
+    }
   }
 
-  &:first-child {
-    margin-right: 7.5px;
-  }
-
-  &:last-child {
-    margin-left: 7.5px;
-  }
   &:hover {
     cursor: pointer;
     & .background-image {
