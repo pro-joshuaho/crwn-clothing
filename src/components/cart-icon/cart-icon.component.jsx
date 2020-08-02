@@ -9,6 +9,7 @@ import "./cart-icon.styles.scss";
 
 const CartIcon = ({ toggleCartHidden, cartItems }) => {
   let itemQuantity = 0;
+
   const itemQuantityFunction = () => {
     cartItems.map((item) => (itemQuantity += item.quantity));
   };
