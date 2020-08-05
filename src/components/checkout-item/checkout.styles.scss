@@ -1,0 +1,37 @@
+.checkout-item {
+  display: flex;
+  padding: 20px 0;
+  width: 100%;
+  height: 130px;
+  align-items: center;
+  border-bottom: 1px solid grey;
+
+  .item-image {
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    img {
+      max-height: 110px;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+  & .item-quantity {
+    .item-increase {
+      padding: 10px;
+      cursor: pointer;
+    }
+  }
+
+  & .normal {
+    width: 23%;
+    padding: 0 10px;
+  }
+
+  & .remove {
+    width: 8%;
+    padding: 10px;
+    cursor: pointer;
+  }
+}
