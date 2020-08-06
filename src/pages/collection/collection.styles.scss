@@ -1,4 +1,4 @@
-.preview {
+.items {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -7,13 +7,10 @@
   align-items: center;
 }
 @media screen and (max-width: 755px) {
-  .preview {
+  .items {
     justify-content: center;
   }
-  .collection-preview {
+  .collection-page {
     text-align: center;
   }
-}
-h2 {
-  margin: 10px;
 }

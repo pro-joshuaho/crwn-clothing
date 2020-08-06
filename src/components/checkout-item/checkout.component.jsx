@@ -13,7 +13,7 @@ const CheckoutItem = ({ item, dispatch }) => {
   return (
     <div className="checkout-item">
       <div className="item-image normal">
-        <img src={imageUrl}></img>
+        <img src={imageUrl} alt="item"></img>
       </div>
       <div className="item-description normal">{name}</div>
       <div className="item-quantity normal">
@@ -35,7 +35,7 @@ const CheckoutItem = ({ item, dispatch }) => {
           &#10095;
         </span>
       </div>
-      <div className="item-price normal">{price}</div>
+      <div className="item-price normal">{price * quantity}</div>
       <div
         className="item-remove remove"
         onClick={() => dispatch(removeItem(item))}

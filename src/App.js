@@ -67,10 +67,12 @@ class App extends React.Component {
           />
           <Route exact path="/checkout" component={checkoutPage} />
           <Route exact path="/" component={Homepage} />
-          <Route exact path="/shop" component={ShopPage} />
+          <Route path="/shop" component={ShopPage} />
         </Switch>
       </div>
     );
+    //the shop route must not be exact because if so, the component won't be rendered if we enter pages like /shop/hats
+    //****************************************** */
   }
 }
 const mapStateToProps = createStructuredSelector({
