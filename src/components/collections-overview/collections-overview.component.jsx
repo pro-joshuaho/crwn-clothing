@@ -5,8 +5,6 @@ import { createStructuredSelector } from "reselect";
 
 import CollectionPreview from "../preview-collection/preview-collection.component";
 
-import "./collections-overview.styles.scss";
-
 const CollectionsOverview = ({ data }) => {
   return (
     <div className="collections-preview">

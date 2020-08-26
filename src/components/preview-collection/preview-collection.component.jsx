@@ -5,7 +5,6 @@ import { withRouter } from "react-router-dom";
 import "./preview-collection.styles.scss";
 
 const PreviewCollection = ({ title, items, history, match }) => {
-  console.log(history);
   return (
     <div className="collection-preview">
       <h2 onClick={() => history.push(`${match.path}/${title.toLowerCase()}`)}>

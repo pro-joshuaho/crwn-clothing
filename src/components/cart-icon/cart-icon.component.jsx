@@ -8,7 +8,12 @@ import { selectCartItemsCount } from "../../redux/cart/cart.reselect";
 
 import { createStructuredSelector } from "reselect";
 
-import "./cart-icon.styles.scss";
+// import "./cart-icon.styles.scss";
+import {
+  ShoppingIconContainer,
+  ItemCount,
+  CartIconContainer,
+} from "./cart-icon.styles";
 
 const CartIcon = ({ toggleCartHidden, itemCount }) => {
   // const itemQuantityFunction = () => {
@@ -22,10 +27,10 @@ const CartIcon = ({ toggleCartHidden, itemCount }) => {
   //   return itemQuantity;
   // };
   return (
-    <div className="cart-icon" onClick={toggleCartHidden}>
-      <ShoppingIcon className="shopping-icon" />
-      <span className="item-count">{/*itemQuantityFunction()*/ itemCount}</span>
-    </div>
+    <CartIconContainer onClick={() => toggleCartHidden() /*toggleCartHidden*/}>
+      <ShoppingIconContainer className="shopping-icon" />
+      <ItemCount>{/*itemQuantityFunction()*/ itemCount}</ItemCount>
+    </CartIconContainer>
   );
 };
 
